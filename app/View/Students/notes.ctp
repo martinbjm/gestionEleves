@@ -1,7 +1,5 @@
 <?php echo $this->Html->css('layout'); ?>
-<?php echo $this->Form->create('Student',array("url" => "index"));?>
-<?php echo $this->Form->submit('Retour',array('div'=>false,'formaction' => Router::url(array('controller' => 'students','action' => 'index')),'class'=>'right inline')); ?>
-<?php echo $this->Form->end() ?>
+<?php echo $this->Html->link('Retour',array('controller'=>'students','action'=>'index'),array('class'=>'right inline')); ?>
 <h3 class='inline'>Notes de <?php echo $student['Student']['nom'].' '.$student['Student']['prenom']; ?></h3>
 <table>
     <thead>
